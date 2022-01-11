@@ -1,0 +1,64 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            .wine_img {
+                position: relative;
+                left: 320px;
+                top: -550px;
+                z-index: 2;
+            }
+
+            .main_img {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                z-index: 1;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <map name="map0">
+
+            <area shape="rect" coords="0,0, 275,130" href="javascript:open_pic_2()">
+            <area shape="rect" coords="420,0, 650,130" href="javascript:open_pic_1()">
+            <area shape="rect" coords="800,0, 1200,130" href="javascript:spawn_wine_img()">
+            <area shape="rect" coords="760,350, 900,500" href="https://s11.favim.com/orig/7/766/7663/76639/kitty-coffee-cat-Favim.com-7663926.jpg">
+
+        </map>
+        <img src="pic_1.png" width="1200" height="800" usemap="#map0" id="imgClickAndChange" class="main_img">
+
+        <script language="javascript">
+            function open_pic_1() {
+
+                document.getElementById("imgClickAndChange").src = "pic_1.png";
+            }
+            function open_pic_2() {
+
+                document.getElementById("imgClickAndChange").src = "pic_2.png";
+            }
+            function spawn_wine_img() {
+                if (document.getElementsByClassName("wine_img").length == 0) {
+
+                    this.img = document.createElement("img");
+                    document.body.appendChild(this.img)
+                    this.img.src = "pic_3.png"
+                    this.img.className = "wine_img";
+                    this.img.id = "wine_img";
+                    this.img.width = "400"
+                    this.img.height = "150"
+                }
+                else if(document.getElementsByClassName("wine_img").length == 1) {
+                    var elem = document.getElementById("wine_img");
+                    elem.remove();
+                }
+
+            }
+        </script>
+    </body>
+
+    </html>
