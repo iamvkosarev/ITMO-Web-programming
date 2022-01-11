@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding Order</title>
+</head>
+
+<body>
+    <form method="POST" action="addOrder.php">
+        <p>Введите имя</p>
+        <input name="name" id="name" maxlength=250>
+        <p>Введите фамилию</p>
+        <input name="surname" id="surname" maxlength=250>
+        <p>Введите отчество</p>
+        <input name="patronymic" id="patronymic" maxlength=250>
+        <p>Введите адрес</p>
+        <input name="address" id="address"  maxlength=250>
+        <p>Введите телефон (+7...)</p>
+        <input name="phonenumber" id="phonenumber" maxlength=12>
+        <p>Введите почту</p>
+        <input name="email" id="email" maxlength=250>
+        <p>Выберите продукт</p>
+        <select id="productSelect" name="productSelect">
+            <option value="..."> ...</option>
+            <option value="Говяжий рамен">Говяжий рамен</option>
+            <option value="Рисовый Пундинг">Рисовый Пундинг</option>
+            <option value="Катлета домашнее с пюре">Катлета домашнее с пюре</option>
+            <option value="Кокосовые онигири">Кокосовые онигири</option>
+            <option value="Салат Цезарь">Салат Цезарь</option>
+
+        </select>
+        <p>Комментарий</p>
+        <input id="comment" name="comment"maxlength=250>
+        <br><br>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
